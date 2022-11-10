@@ -44,7 +44,7 @@ const lengthEl = document.querySelector(`#length`);
 const generateEl = document.querySelector(`#generate`);
 
 function generatePassword(lower, upper, number, symbol, length) {
-let generatePassword = ``;
+let generatedPassword = ``;
 
 const typesCount = lower + upper + number + symbol;
 console.log(typesCount)
@@ -71,7 +71,7 @@ for (i=0; i<length; i+= typesCount){
     typesArr.forEach((type) =>{
         const funcName = type[0];
         console.log(funcName);
-        generatePassword +=randomFunctions[funcName]();
+        generatedPassword +=randomFunctions[funcName]();
         console.log(generatedPassword);
     })
 }
